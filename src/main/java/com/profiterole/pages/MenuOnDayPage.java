@@ -62,6 +62,7 @@ public class MenuOnDayPage extends PageObject {
     }
 
     public void clickMilk() {
+        waitForRenderedElements(By.xpath("//*[@id='cuisine']/div[contains(.,'Молоко')]"));
         milk.click();
     }
 
@@ -77,7 +78,8 @@ public class MenuOnDayPage extends PageObject {
         return divBreakfast;
     }
 
-    public void dragNDropDishForBreakfast(WebElementFacade dish) {
-        new Actions(getDriver()).clickAndHold(dish).moveToElement(getDivBreakfast()).release().perform();
+    public void dragNDropDishForBreakfast() {
+        waitForRenderedElements(By.xpath("//*[@id='cuisine']/div[contains(.,'Молоко')]"));
+        new Actions(getDriver()).clickAndHold(getMilk()).moveToElement(getDivBreakfast()).release().perform();
     }
 }

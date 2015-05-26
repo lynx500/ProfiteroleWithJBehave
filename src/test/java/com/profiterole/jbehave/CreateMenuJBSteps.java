@@ -38,7 +38,7 @@ public class CreateMenuJBSteps {
 
     @When("drag and drops milk on breakfast")
     public void whenDragNDropDishForBreakfast() {
-        createMenuSteps.dragNDropDishForBreakfast(createMenuSteps.addMilk());
+        createMenuSteps.dragNDropDishForBreakfast();
     }
 
     @Then("the user sees left headline '$headline'")

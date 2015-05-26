@@ -44,12 +44,6 @@ public class CreateMenuSteps extends ScenarioSteps {
     }
 
     @Step
-    public void openUkrCuisine() {
-        openBreakfatsPage();
-        clickUkrCuisine();
-    }
-
-    @Step
     public void clickMilk() {
         menuOnDayPage.clickMilk();
     }
@@ -70,7 +64,7 @@ public class CreateMenuSteps extends ScenarioSteps {
     }
 
     @Step
-    public void dragNDropDishForBreakfast(WebElementFacade dish) {
-        menuOnDayPage.dragNDropDishForBreakfast(dish);
+    public void dragNDropDishForBreakfast() {
+        menuOnDayPage.dragNDropDishForBreakfast();
     }
 }
