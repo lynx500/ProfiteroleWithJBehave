@@ -45,16 +45,4 @@ public class LoginSteps extends ScenarioSteps {
         assertEquals(text, loginPage.getTextOnLinkProfile());
     }
 
-    @Step
-    public void login(String login, String password) {
-        openLoginPage();
-        setLogin(login);
-        setPassword(password);
-        clickLoginBtn();
-    }
-
-    @Step
-    public void checkHeadline(String headline) {
-        assertEquals(headline, loginPage.getHeadline());
-    }
 }
